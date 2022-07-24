@@ -1,25 +1,7 @@
 import 'dart:async';
-import 'dart:html';
-
-import 'package:flame/collisions.dart';
-import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
-import 'package:flutter/material.dart';
-import 'dart:async';
-import 'dart:math';
-
 import 'package:flame/components.dart';
-import 'package:flame/flame.dart';
-import 'package:flame/game.dart';
 import 'package:flame/input.dart';
-import 'package:flame/sprite.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
-
-import 'package:flame/components.dart';
-import 'package:flame/extensions.dart';
-import 'package:flame/geometry.dart';
-import 'package:flutter/material.dart';
 
 import 'boss.dart';
 import 'player.dart';
@@ -54,12 +36,6 @@ class SpaceShooterGame extends FlameGame with PanDetector {
 
   void addEntity(var entity){
     add(entity);
-  }
-
-  @override
-  void update(double dt) {
-    // TODO: implement update
-    super.update(dt);
   }
 
   @override

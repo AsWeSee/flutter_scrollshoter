@@ -3,7 +3,7 @@ library minigame_scrollshooter_loadingscreen;
 import 'package:flame/game.dart';
 import 'package:flutter/cupertino.dart';
 
-import 'mainGame.dart';
+import 'main_game.dart';
 
 class ScrollShooterGame extends StatefulWidget {
   const ScrollShooterGame({Key? key}) : super(key: key);

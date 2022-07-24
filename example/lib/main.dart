@@ -1,11 +1,12 @@
-import 'package:example/pages/home.dart';
-import 'package:example/pages/loading.dart';
 import 'package:flutter/material.dart';
+
+import 'pages/home.dart';
+import 'pages/loading.dart';
 
 void main() => runApp(MaterialApp(
     initialRoute: '/',
     routes: {
-      '/': (context) => Loading(),
-      '/home': (context) => MyApp(),
+      '/': (context) => const Loading(),
+      '/home': (context) => const MyApp(),
     }
 ));
