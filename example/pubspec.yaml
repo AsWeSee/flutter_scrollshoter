@@ -29,8 +29,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-#  minigame_scrollshooter_loadingscreen:
-#    path: ../
+  minigame_scrollshooter_loadingscreen:
+    path: ../
   flame: ^1.0.0-releasecandidate.12
   flame_forge2d: ^0.7.2-releasecandidate.12
 

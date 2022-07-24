@@ -22,37 +22,28 @@ import 'package:flame/geometry.dart';
 import 'package:flutter/material.dart';
 
 import 'mainGame.dart';
-import 'playershot.dart';
 
-class Player extends PositionComponent  with HasGameRef<SpaceShooterGame> {
-  static final _paint = Paint()..color = Colors.yellow;
+
+class PlayerShot extends PositionComponent  with HasGameRef<SpaceShooterGame>{
+  static final _paint = Paint()..color = Colors.white;
   
-  var shootCounter = 0;
   @override
   void render(Canvas canvas) {
     canvas.drawRect(size.toRect(), _paint);
   }
 
+  void move(Vector2 delta) {
+    position.add(delta);
+  }
+
   @override
   void update(double dt) {
     super.update(dt);
-    
-    shootCounter++;
-    
-    if (shootCounter >= 50){
-      shootCounter = 0;
-
-      PlayerShot shot = PlayerShot()
-      ..position = position
-      ..width = 5
-      ..height = 10
-      ..anchor = Anchor.center;
-
-      gameRef.add(shot);
+    move(Vector2(0, -3));
+    var distance = SpaceShooterGame.boss.position - position;
+    if(distance.length <= 60){
+      debugPrint("contact");
+      gameRef.remove(this);
     }
-  }
-
-  void move(Vector2 delta) {
-    position.add(delta);
   }
 }
