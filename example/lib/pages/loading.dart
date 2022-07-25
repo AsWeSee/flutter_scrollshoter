@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:minigame_scrollshooter_loadingscreen/minigame_scrollshooter_loadingscreen.dart';
 
@@ -11,10 +13,12 @@ class Loading extends StatefulWidget {
 class _LoadingState extends State<Loading> {
 
   void prepareStep() async {
+
     // LongOperation instance = LongOperation();
     // await instance.make();
 
-    // await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 15));
+
     // Navigator.pushReplacementNamed(context, '/home', arguments: {
     //   'argument1': "something",
     // });
@@ -28,6 +32,6 @@ class _LoadingState extends State<Loading> {
 
   @override
   Widget build(BuildContext context) {
-    return const ScrollShooterGame();
+    return ScrollShooterGame();
   }
 }
