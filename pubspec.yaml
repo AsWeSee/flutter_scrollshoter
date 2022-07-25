@@ -1,6 +1,6 @@
 name: minigame_scrollshooter_loadingscreen
 description: Scroll shooter minigame that can be used as loading screen
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/AsWeSee/flutter_scrollshoter
 repository: https://github.com/AsWeSee/flutter_scrollshoter
 
