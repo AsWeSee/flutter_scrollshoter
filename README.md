@@ -2,12 +2,11 @@
 
 This project is a starting and enging point of test for flutter flame lib usability
 
-
-
-
 ## How to use
 
-'''
+Add ScrollShooterGame in your loading screen so it will be shown until long operation will be finished
+
+```
 class Loading extends StatefulWidget {
   const Loading({Key? key}) : super(key: key);
 
@@ -24,9 +23,9 @@ class _LoadingState extends State<Loading> {
 
     await Future.delayed(const Duration(seconds: 15));
 
-    // Navigator.pushReplacementNamed(context, '/home', arguments: {
-    //   'argument1': "something",
-    // });
+    Navigator.pushReplacementNamed(context, '/home', arguments: {
+      'argument1': "something",
+    });
   }
 
   @override
@@ -40,4 +39,4 @@ class _LoadingState extends State<Loading> {
     return ScrollShooterGame();
   }
 }
-'''
+```
